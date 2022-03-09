@@ -1,0 +1,33 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'rust_debug_test'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rust_debug_test",
+                    "--package=rust_debug_test"
+                ],
+                "filter": {
+                    "name": "rust_debug_test",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch rust_debug_test",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/rust_debug_test",
+            "args": [],
+        },
+    ]
+}
